@@ -1,4 +1,6 @@
 import "./globals.css";
+import Cabezera from "@/components/cabezera.js";
+import Foot from "@/components/piecera.js"
 
 export const metadata = {
   title: "Luckydev | Portfolio",
@@ -9,12 +11,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
+        <link rel="icon" href="/favicon.avif" type="image/png" />
+        
       </head>
-      <body
-        className="bg-gray-900 text-white"
-      >
+      <body className="">
+        <Cabezera />
         {children}
+        
       </body>
     </html>
   );

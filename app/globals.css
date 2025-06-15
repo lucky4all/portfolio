@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+#enlace {
+  @apply hover:text-purple-700 cursor-pointer transition-colors justify-center items-center text-xl font-sans
+}
+
+body {
+  @apply bg-gray-800 text-white
+}
