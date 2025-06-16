@@ -9,8 +9,8 @@ const roboto = Roboto({
 
 export default function Cabezera() {
     return (
-        <header className="flex flex-row bg-gray-700 h-16 shadow-2xs shadow-black items-center justify-between px-4 sm:px-8 lg:px-16">
-            <p className="text-purple-500 text-2xl sm:text-3xl font-bold border-r-4 border-purple-500 pr-2 sm:pr-4 hover:text-purple-600 cursor-pointer transition-colors">
+        <header className="flex flex-row bg-gray-700 h-16 shadow-2xs shadow-black items-center justify-between px-4 sm:px-8 lg:px-16 overflow-auto flex-wrap">
+            <p className="text-purple-500 text-2xl sm:text-3xl font-bold border-r-4 border-purple-500 pr-2 sm:gap-5 hover:text-purple-600 cursor-pointer transition-colors">
                 ⚡ Lucky
             </p>
             <nav className="flex gap-2 sm:gap-4 lg:gap-8 items-center">
