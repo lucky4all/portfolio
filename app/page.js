@@ -26,11 +26,12 @@ export default function Home() {
   return (
     <div className="flex justify-center mt-[7vh] text-center flex-col">
       <div className={roboto.className}>
-        <h1 className="text-7xl font-bold">Hola, Soy <span className="text-purple-400">LuckyDev <span className="font-sans">👋🏻</span></span></h1>
+        <h1 className="text-7xl font-bold">Hola, soy <span className="text-purple-400">LuckyDev <span className="font-sans">👋🏻</span></span></h1>
       </div>
       <div className={inconsolata.className}>
-        <p className="mt-[5vh] text-xl text-gray-400">Un Desarrollador Creativo Creando Aplicaciones Digitales de forma <span className="text-sky-600">Impecable</span></p>
+        <p className="mt-[5vh] text-2xl text-gray-400">Un Desarrollador Creativo Creando Aplicaciones Digitales de forma <span className="text-sky-600">Impecable</span></p>
       </div>
+       <AlternativeCard />
       
     </div>
   )
@@ -51,10 +52,10 @@ export function Card() {
   )
 }
 
-export function About() {
+export function AlternativeCard() {
   return (
-    <>
+    <div>
 
-    </>
+    </div>
   )
 }
