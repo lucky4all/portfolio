@@ -5,6 +5,10 @@ import Foot from "@/components/piecera.js"
 export const metadata = {
   title: "Luckydev | Portfolio",
   description: "Portafolio personal de Luckydev",
+  openGraph: {
+    title: "Lucky dev",
+    description: "Portfolio personal"
+  }
 };
 
 export default function RootLayout({ children }) {

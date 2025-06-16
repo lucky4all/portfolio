@@ -1,11 +1,11 @@
 "use client"
+
 /*
 Este seria el index.html del directorio raiz
 */
 
 import Image from "next/image"
 import { Ubuntu, Roboto, Inconsolata } from "next/font/google"
-
 const ubuntu = Ubuntu({
   weight: "700",
   subsets: ['latin']
@@ -48,5 +48,13 @@ export function Card() {
       />
       <p>Hola! soy Lucas Coscia, un desarrollador web con ganas <strong>muchas</strong> de aprender en el hermoso campo de la industria tech.</p>
     </div>
+  )
+}
+
+export function About() {
+  return (
+    <>
+
+    </>
   )
 }
