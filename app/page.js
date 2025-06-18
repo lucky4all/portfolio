@@ -1,9 +1,3 @@
-"use client"
-
-/*
-Este seria el index.html del directorio raiz
-*/
-
 import Image from "next/image"
 import { Ubuntu, Roboto, Inconsolata } from "next/font/google"
 const ubuntu = Ubuntu({

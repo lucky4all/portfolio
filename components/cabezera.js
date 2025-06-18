@@ -15,8 +15,8 @@ export default function Cabezera() {
             </p>
             <nav className="flex gap-2 sm:gap-4 lg:gap-8 items-center">
                 <Link href="/" id="enlace" className={roboto.className + " text-base sm:text-lg"}>Inicio</Link>
-                <Link href="/contacto" id="enlace" className={roboto.className + " text-base sm:text-lg"}>Contacto</Link>
-                <Link href="proyectos" id="enlace" className={roboto.className + " text-base sm:text-lg"}>Proyectos</Link>
+                <Link href="/contacto" id="enlace" className={roboto.className + " text-base sm:text-lg"} prefetch={false}>Contacto</Link>
+                <Link href="proyectos" id="enlace" className={roboto.className + " text-base sm:text-lg"} prefetch={false}>Proyectos</Link>
                 <button className="bg-yellow-400 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-xl font-bold cursor-pointer border-black border-2 hover:bg-amber-400 transition-colors text-sm sm:text-base">
                     Contratame
                 </button>
