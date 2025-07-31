@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout title="Luckydev Contacto">
+    <Navbar />
+    <h1>Estás en la pagina de contacto</h1>
+</Layout>
+
+<script async>
+    const path = window.location.pathname;
+    const imagen = document.getElementById("forma");
+    
+    if (path === "/contact") {
+        imagen.style.display = "none";
+    }
+</script>

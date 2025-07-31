@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+<Layout title="Luckydev demos">
+    <Navbar />
+</Layout>
+
+<script async>
+    const path = window.location.pathname;
+    const imagen = document.getElementById("forma");
+    
+    if (path === "/demos") {
+        imagen.style.display = "none";
+    }
+</script>

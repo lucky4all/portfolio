@@ -1,0 +1,219 @@
+---
+import Image from "astro/components/Image.astro";
+import yo from "../assets/images/yo.jpeg";
+---
+
+<div class="card text-white">
+  <div class="card-header">
+    <span class="image">
+      <Image src={yo} alt="Lucas Coscia" id="foto" loading="eager" />
+    </span>
+    <div class="card-header-slanted-edge"></div>
+  </div>
+
+  <div class="card-body">
+    <span class="name">Lucas Coscia</span><br />
+    <span class="job-title"><u>Full-Stack SecOps</u></span>
+    <div class="bio">
+      Experiencia desde el frontend hasta el backend, con un enfoque fuerte en
+      desarrollar aplicaciones <strong>seguras</strong>.
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <div class="stats">
+      <div class="stat">
+        <span class="label">Proyectos</span>
+        <span class="value">3</span>
+      </div>
+      <div class="stat">
+        <span class="label">Clientes</span>
+        <span class="value">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Seguidores</span>
+        <span class="value">12k</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    position: relative;
+    width: 315px;
+    height: 450px;
+    margin: 30px auto;
+    box-shadow: 0 0 20px white;
+    border-radius: 10px;
+    background-color: black;
+  }
+
+  .card-header {
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .card-header:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgb(123, 0, 255),
+      rgba(181, 181, 181, -0.2)
+    );
+    border-radius: 10px;
+  }
+
+  .image {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    z-index: 2;
+  }
+
+  .card-header-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    border: none;
+    overflow: hidden;
+  }
+
+  .btn-message {
+    display: inline-block;
+    width: 19.37px;
+    height: 16.99px;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;
+  }
+
+  .btn-menu {
+    display: inline-block;
+    width: 19px;
+    height: 12.16px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+  }
+
+  .card-header-slanted-edge {
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+
+  .card-body {
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  .name {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-family: "Google Sans Code";
+  }
+
+  .job-title {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 15px;
+    color: #8800ff;
+    font-weight: bold;
+    font-family: "Montserrat";
+  }
+
+  .bio {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    margin: 10px auto;
+    line-height: 20px;
+    font-family: "Nata Sans", sans-serif;
+  }
+
+  .social-accounts img {
+    width: 15px;
+  }
+
+  .social-accounts a {
+    margin-left: 10px;
+  }
+
+  .social-accounts a:first-child {
+    margin-left: 0;
+  }
+
+  .card-footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+  }
+
+  .stat {
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+    color: white;
+  }
+
+  .stat:nth-child(2) {
+    border-left: 1px solid grey;
+  }
+
+  .stat:nth-child(3) {
+    border-left: 1px solid grey;
+  }
+
+  .stat .label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #95989a;
+  }
+
+  .stat .value {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  #foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+</style>

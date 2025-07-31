@@ -1,22 +1,124 @@
-<!doctype html>
-<html lang="en">
+---
+import background from "../assets/images/back.png";
+import Image from "astro/components/Image.astro";
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+		<ClientRouter />
 	</head>
 	<body>
+		<div id="particles-container">
+			<div class="particle-layer" id="particles-1"></div>
+			<div class="particle-layer" id="particles-2"></div>
+			<div class="particle-layer" id="particles-3"></div>
+		</div>
+		<Image
+			src={background}
+			alt="figura geometrica"
+			loading="eager"
+			class="z-index-[-1] absolute w-96 h-96"
+			id="forma"
+			/>
 		<slot />
 	</body>
 </html>
 
 <style>
-	html,
+	@import "tailwindcss";
+	
 	body {
-		margin: 0;
+		@apply bg-black;
+	}
+
+	#particles-container {
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
+		z-index: -1;
+	}
+
+	.particle-layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.particle-layer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5px;
+		height: 5px;
+		background: white;
+		border-radius: 50%;
+		box-shadow: 
+			var(--s1) var(--p1) var(--b1) white,
+			var(--s2) var(--p2) var(--b2) white,
+			var(--s3) var(--p3) var(--b3) white,
+			var(--s4) var(--p4) var(--b4) white,
+			var(--s5) var(--p5) var(--b5) white,
+			var(--s6) var(--p6) var(--b6) white;
+		
+		animation: blink 2s infinite ease-in-out;
+		animation-delay: calc(var(--i) * -0.5s);
+		opacity: 0;
+	}
+
+	#particles-1::before {
+		--i: 1;
+		--p1: 15vw; --s1: 10vh; --b1: 0px;
+		--p2: 45vw; --s2: 80vh; --b2: 1px;
+		--p3: 75vw; --s3: 20vh; --b3: 2px;
+		--p4: 25vw; --s4: 60vh; --b4: 0px;
+		--p5: 55vw; --s5: 90vh; --b5: 1px;
+		--p6: 85vw; --s6: 40vh; --b6: 2px;
+		animation-duration: 4s;
+	}
+
+	#particles-2::before {
+		--i: 2;
+		--p1: 5vw; --s1: 50vh; --b1: 1px;
+		--p2: 35vw; --s2: 10vh; --b2: 0px;
+		--p3: 65vw; --s3: 70vh; --b3: 2px;
+		--p4: 95vw; --s4: 30vh; --b4: 1px;
+		--p5: 15vw; --s5: 95vh; --b5: 0px;
+		--p6: 85vw; --s6: 5vh; --b6: 2px;
+		animation-duration: 5s;
+	}
+	
+	#particles-3::before {
+		--i: 3;
+		--p1: 20vw; --s1: 30vh; --b1: 2px;
+		--p2: 50vw; --s2: 85vh; --b2: 0px;
+		--p3: 80vw; --s3: 50vh; --b3: 1px;
+		--p4: 10vw; --s4: 75vh; --b4: 2px;
+		--p5: 40vw; --s5: 5vh; --b5: 0px;
+		--p6: 70vw; --s6: 60vh; --b6: 1px;
+		animation-duration: 4s;
+	}
+	
+	@keyframes blink {
+		0%, 100% { opacity: 0; }
+		50% { opacity: 1; }
 	}
 </style>
