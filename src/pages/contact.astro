@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/form/ContactForm.astro";
+---
+
+<Layout title="Contacto">
+    <h1>Estás en la pagina de contacto</h1>
+    <ContactForm />
+</Layout>
+
+<style>
+    @import "tailwindcss";
+
+    h1 {
+        @apply text-5xl text-center
+    }
+</style>

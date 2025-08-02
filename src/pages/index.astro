@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SocialMediaLinks from '../components/about/SocialMediaLinks.astro';
+import DownLoad from '../components/buttons/DownLoad.astro';
+import Card from '../components/about/cards/Card.astro';
+import RealtimeChat from '../components/about/cards/RealTimeChatCard.astro';
+import EmptyCard from "../components/about/cards/EmptyCard.astro";
+---
+
+<Layout title='Lucky Porfolio'>
+    <main class="flex flex-col gap-12">
+        <section>
+            <h1 class="font-bold text-xl mb-2">Lucas coscia</h1>
+            <SocialMediaLinks />
+        </section>
+        <article>
+           <Card /> 
+        </article>
+        <section>
+            <h2 class="text-3xl">Mis proyectos</h2>
+        </section>
+        <article>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-y-12 md:gap-y-12 lg:gap-y-5 gap-x-12">
+                <RealtimeChat />
+                <EmptyCard />
+                <EmptyCard />
+            </div>
+        </article>
+        
+    </main>
+</Layout>
+
+<style>
+    @import "tailwindcss";
+
+    :root {
+        --font-monserrat: 'Montserrat';
+        --font-google: 'Google Sans Code';
+        --font-inter: 'Inter';
+    }
+
+    h1 {
+        font-family: var(--font-monserrat);
+        @apply text-black text-4xl text-center
+    }
+
+    main {
+        @apply flex flex-col items-center justify-center
+    }
+
+</style>

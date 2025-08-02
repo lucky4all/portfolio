@@ -1,0 +1,36 @@
+---
+import "../../../globals.css";
+import GitHubButton from "../../buttons/GitHubButton.astro";
+---
+
+<div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+  <div id="back" class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+  </div>
+  <div class="p-6">
+    <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+     Chat en tiempo real
+    </h5>
+    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+    Es un chat en tiempo real hecho con <span class="text-yellow-400 font-bold">JavaScript</span> y <span class="text-green-700 font-bold">WebSocket</span>.
+    Permite a los usuarios escoger un nombre de usuario y chatear a nivel global.
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <GitHubButton id="botonazo" context="Ver en GitHub" />
+  </div>
+</div>
+
+<script>
+  const boton = document.getElementById("botonazo");
+  boton?.addEventListener('click', function() {
+    window.location.href = "https://github.com/lucky4all/realtime-chat"
+  })
+</script>
+
+<style>
+  #back {
+    background: url("https://www.datocms-assets.com/48401/1628644950-javascript.png");
+    background-position: center;
+    background-size: cover;
+  }
+</style>
