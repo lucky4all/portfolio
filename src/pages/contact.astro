@@ -1,17 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactForm from "../components/form/ContactForm.astro";
+import GoBack from "../components/buttons/GoBack.astro";
 ---
 
 <Layout title="Contacto">
-    <h1>Estás en la pagina de contacto</h1>
-    <ContactForm />
+    <header>
+        <GoBack />
+    </header>
+    <main class="flex flex-col justify-center items-center m-auto gap-5">
+      <h1 class="text-4xl font-bold">Enviame un mensaje</h1>
+      <ContactForm />  
+    </main>
+    
 </Layout>
 
 <style>
     @import "tailwindcss";
-
     h1 {
-        @apply text-5xl text-center
+        font-family: 'Inter';
+    }
+
+    body {
+        background-color: whitesmoke;
+    }
+
+    main {
+        @apply flex justify-center m-auto mt-[20vh]
     }
 </style>
