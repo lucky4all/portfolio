@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import "../assets/index.css";
+import { Head } from "../components/Head";
+---
+
+<Layout>
+  <Head client:load />
+
+  <ProjectCard
+    title="Chat en tiempo real"
+    description="Un chat hecho con WebSockets"
+    link="#"
+  />
+</Layout>

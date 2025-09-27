@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Head } from "../components/Head";
+import MainCard from "../components/MainCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+---
+
+<Layout>
+	<Head client:load />
+	<section class="flex justify-center items-center mt-[15vh]">
+		<MainCard />
+	</section>
+	<main class="flex flex-wrap sm:flex-col md:flex-row justify-center gap-6 gap-x-40 items-center mt-[10vh]">
+		<ProjectCard
+			title="Chat en tiempo real"
+			description="Un chat hecho con React y WebSockets"
+			link="#"
+		/>
+		<ProjectCard
+			title="To-Do list"
+			description="Una API CRUD con tecnicas de caching"
+			link="#"
+		/>
+		<ProjectCard
+			title="Clima en tu zona"
+			description="Una aplicación la cual te notifica del clima en tu localización"
+			link="#"
+		/>
+	</main>
+</Layout>
