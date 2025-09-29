@@ -2,7 +2,7 @@ import "../assets/index.css";
 
 export function Head() {
     return (
-        <header className="flex justify-center mt-1">
+        <div className="flex justify-center mt-1">
             <div className="flex justify-around gap-4 items-center px-4 py-1 bg-black rounded-[15px] ring-1 ring-white sm:w[25vw] md:w-[30vw] lg:w-[35vw] xl:w-[25vw] 2xl:w-[25vw]">
                 <div className="relative group hover:cursor-pointer hover:bg-slate-800 p-2 rounded-full transition-all duration-500">
                     <a href="/">
@@ -26,6 +26,6 @@ export function Head() {
                     </a>
                 </div>
             </div>
-        </header>
+        </div>
     );
 }

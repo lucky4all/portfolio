@@ -7,10 +7,13 @@ import AltProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout>
-  <Head client:load /> <!-- ISLAND -->
+  <header>
+    <Head client:load /> <!-- ISLAND -->
+  </header>
+  
   <main class="flex flex-col justify-center items-center mt-[10vh]">
     <AltCard />
-    <h1 class="text-5xl text-center">Mis Proyectos</h1>
+    <h1 class="text-5xl text-center mt-[5%]">Mis Proyectos</h1>
     <section class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full px-4 sm:px-8 lg:px-16">
       <AltProjectCard title="To-Do List" description="Una API CRUD la cual implementa JSON-Web-Tokens como autenticación." category="React, NestJS" date="29, Septiembre, 2025" />
       <AltProjectCard title="Dashboard con análisis de logs" description="Una interfaz web gráfica donde es posible recuperar datos del servidor y mostrarlo con gráficos." date="1, Octubre, 2025" category="Next.js" />
