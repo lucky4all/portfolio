@@ -3,14 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import "../assets/index.css";
 import { Head } from "../components/Head";
+import AltCard from "../components/AltCard.astro";
+import AltProjectCard from "../components/AltProjectCard.astro";
 ---
 
 <Layout>
   <Head client:load />
-
-  <ProjectCard
-    title="Chat en tiempo real"
-    description="Un chat hecho con WebSockets"
-    link="#"
-  />
+  <main class="flex flex-col justify-center items-center mt-[10vh]">
+    <AltCard />
+    <h1 class="text-5xl">Mis Proyectos</h1>
+    <section class="mt-10 grid grid-cols-3 grid-rows-1 gap-12">
+      <AltProjectCard title="To-Do List" description="Una API CRUD la cual implementa JSON-Web-Tokens como autenticación" category="React, NestJS" date="29, Septiembre, 2025" />
+      <AltProjectCard />
+      <AltProjectCard />
+    </section>
+  </main>
+  
 </Layout>
