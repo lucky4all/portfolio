@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import "../assets/index.css";
 import { Head } from "../components/Head";
-import AltCard from "../components/AltCard.astro";
-import AltProjectCard from "../components/ProjectCard.astro";
+import PersonalCard from "../components/PersonalCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout>
@@ -12,12 +12,12 @@ import AltProjectCard from "../components/ProjectCard.astro";
   </header>
   
   <main class="flex flex-col justify-center items-center mt-[10vh]">
-    <AltCard />
+    <PersonalCard />
     <h1 class="text-5xl text-center mt-[5%]">Mis Proyectos</h1>
     <section class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full px-4 sm:px-8 lg:px-16">
-      <AltProjectCard title="To-Do List" description="Una API CRUD la cual implementa JSON-Web-Tokens como autenticación." category="React, NestJS" date="29, Septiembre, 2025" />
-      <AltProjectCard title="Dashboard con análisis de logs" description="Una interfaz web gráfica donde es posible recuperar datos del servidor y mostrarlo con gráficos." date="1, Octubre, 2025" category="Next.js" />
-      <AltProjectCard title="Password generator" description="Una aplicación web & Extensión de Firefox la cual te permite generar contraseñas seguras" date="25, Enero, 2026" category="Node.js, Crypto" />
+      <ProjectCard title="To-Do List" description="Una API CRUD la cual implementa JSON-Web-Tokens como autenticación." category="React, NestJS" date="29, Septiembre, 2025" />
+      <ProjectCard title="Dashboard con análisis de logs" description="Una interfaz web gráfica donde es posible recuperar datos del servidor y mostrarlo con gráficos." date="1, Octubre, 2025" category="Next.js" />
+      <ProjectCard title="Password Helper" description="Una aplicación web & Extensión de Firefox la cual te permite generar contraseñas seguras y revisar la seguridad de las mismas." date="25, Enero, 2026" category="Node.js, Crypto" />
     </section>
   </main>
 </Layout>
