@@ -1,0 +1,6 @@
+# robots.txt for portfolio website
+
+User-agent: *
+Disallow: /contact
+
+Sitemap: /sitemap.xml
