@@ -10,7 +10,6 @@ export default function FormPage() {
         try {
             let response = await fetch("https://formspree.io/f/xqayanrl", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ nombre: name, contacto: contactInfo, mensaje: message }) })
             setShowSucess(true);
-            globalThis.localStorage.setItem('formSubmitted', 'true');
             if (!response.ok) {
                 throw new Error(data.message || "Something went wrong");
             }
