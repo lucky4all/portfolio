@@ -3,24 +3,45 @@ import { ClientRouter } from "astro:transitions";
 ---
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<ClientRouter />
-		<title>Lucas Coscia</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+
+        
+        <title>Lucas Coscia - Desarrollador Web y Portfolio</title>
+        <meta name="description" content="Desarrollador web especializado en crear experiencias digitales únicas y funcionales." />
+        <meta name="author" content="Lucas Coscia" />
+        <meta name="keywords" content="Lucas Coscia, desarrollador web, portfolio, diseño web, desarrollo frontend, desarrollo backend" />
+        <meta name="robots" content="index, follow" />
+
+        
+        <meta property="og:title" content="Lucas Coscia - Desarrollador Web y Portfolio" />
+        <meta property="og:description" content="Lucas Coscia, desarrollador web especializado en crear experiencias digitales únicas y funcionales." />
+        <meta property="og:image" content="/yo.jpeg" />
+        <meta property="og:url" content="https://luckyfolio.netlify.app" />
+        <meta property="og:type" content="website" />
+
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Lucas Coscia - Desarrollador Web y Portfolio" />
+        <meta name="twitter:description" content="Desarrollador web especializado en crear experiencias digitales únicas y funcionales." />
+        <meta name="twitter:image" content="/yo.jpeg" />
+       
+        <ClientRouter />
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Inter', sans-serif;
+    }
 </style>
