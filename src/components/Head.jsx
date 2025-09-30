@@ -19,7 +19,7 @@ export function Head() {
                     </a>
                 </div>
                 <div className="relative group hover:cursor-pointer hover:bg-slate-800 p-2 rounded-full transition-all duration-500">
-                    <a href="/portfolio">
+                    <a href="/contact">
                         <svg width={20} height={20} viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M27.5 0H2.5C1.11929 0 0 1.11929 0 2.5V27.5C0 28.8807 1.11929 30 2.5 30H27.5C28.8807 30 30 28.8807 30 27.5V2.5C30 1.11929 28.8807 0 27.5 0ZM10 26.25H4.375V10H10V26.25ZM10 7.5H4.375V4.375H10V7.5ZM15.625 26.25H11.25V15H15.625V26.25ZM15.625 12.5H11.25V9.375H15.625V12.5ZM26.25 26.25H20.625V18.75H26.25V26.25ZM26.25 16.875H20.625V14.0625H26.25V16.875ZM26.25 12.5H20.625V9.375H26.25V12.5ZM26.25 7.5H20.625V4.375H26.25V7.5Z" fill="white" />
                         </svg>

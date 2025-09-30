@@ -1,3 +1,15 @@
 ---
+import FormPage from "../components/Form";
 import Layout from "../layouts/Layout.astro";
+import "../assets/index.css";
+import { Head } from "../components/Head";
 ---
+
+<Layout>
+    <header>
+        <Head client:load />
+    </header>
+    <main class="mt-[20vh]">
+      <FormPage client:load />   
+    </main>
+</Layout>
